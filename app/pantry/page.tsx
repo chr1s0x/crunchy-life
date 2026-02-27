@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { pantryItems, type PantryItem } from "@/lib/checklist-data";
 import { getPantryProgress, togglePantryItem } from "@/lib/progress";
+import Hedgehog from "@/components/Hedgehog";
 
 function PantryCard({
   item,
@@ -86,12 +87,15 @@ export default function PantryPage() {
       <div className="border-b border-border px-6 py-10">
         <div className="mx-auto max-w-6xl">
           <p className="label-caps mb-2 text-accent">What to stock & what to toss</p>
-          <h1
-            className="mb-6 text-4xl font-bold text-foreground md:text-5xl"
-            style={{ fontFamily: "var(--font-playfair)" }}
-          >
-            Your Pantry & Fridge
-          </h1>
+          <div className="flex items-center gap-4 mb-6">
+            <h1
+              className="text-4xl font-bold text-foreground md:text-5xl"
+              style={{ fontFamily: "var(--font-playfair)" }}
+            >
+              Your Pantry & Fridge
+            </h1>
+            <Hedgehog className="w-14 h-12 flex-shrink-0" />
+          </div>
           <p className="mb-8 max-w-lg text-muted-foreground">
             Click any item to mark it done. Green cards are crunchy-approved — stock them.
             Orange cards need a swap — check them off once replaced.

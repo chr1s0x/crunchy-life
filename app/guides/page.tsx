@@ -4,6 +4,7 @@ import {
   CATEGORY_DESCRIPTIONS,
   type Category,
 } from "@/lib/checklist-data";
+import Hedgehog from "@/components/Hedgehog";
 
 const categories: Category[] = ["pantry", "personal-care", "cleaning", "lifestyle"];
 
@@ -134,12 +135,15 @@ export default function GuidesPage() {
       <div className="border-b border-border px-6 py-10">
         <div className="mx-auto max-w-6xl">
           <p className="label-caps mb-2 text-accent">Learn the why behind the swaps</p>
-          <h1
-            className="text-4xl font-bold text-foreground md:text-5xl"
-            style={{ fontFamily: "var(--font-playfair)" }}
-          >
-            Crunchy Guides
-          </h1>
+          <div className="flex items-center gap-4">
+            <h1
+              className="text-4xl font-bold text-foreground md:text-5xl"
+              style={{ fontFamily: "var(--font-playfair)" }}
+            >
+              Crunchy Guides
+            </h1>
+            <Hedgehog className="w-14 h-12 flex-shrink-0" />
+          </div>
         </div>
       </div>
 
@@ -226,8 +230,9 @@ export default function GuidesPage() {
       </div>
 
       <footer className="border-t border-border py-8 text-center">
-        <span className="label-caps text-muted-foreground">
-          🌿 The Crunchy Life — live clean, live well
+        <span className="label-caps text-muted-foreground inline-flex items-center gap-2">
+          <Hedgehog className="w-6 h-5" />
+          The Crunchy Life — live clean, live well
         </span>
       </footer>
     </div>

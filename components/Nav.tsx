@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Hedgehog from "@/components/Hedgehog";
 
 const links = [
   { href: "/checklist", label: "Checklist" },
@@ -16,8 +17,8 @@ export default function Nav() {
     <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/95 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link href="/" className="group flex items-center gap-2.5">
-          <span className="flex h-7 w-7 items-center justify-center rounded-full bg-primary text-sm text-primary-foreground transition-transform group-hover:rotate-12">
-            🌿
+          <span className="flex items-center justify-center transition-transform group-hover:rotate-6">
+            <Hedgehog className="w-9 h-8" />
           </span>
           <span
             className="text-base font-semibold tracking-tight text-foreground"

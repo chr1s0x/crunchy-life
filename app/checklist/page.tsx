@@ -15,6 +15,7 @@ import {
   getCategoryProgress,
   getCrunchyLevel,
 } from "@/lib/progress";
+import Hedgehog from "@/components/Hedgehog";
 import { useSearchParams } from "next/navigation";
 
 const categories: Category[] = ["pantry", "personal-care", "cleaning", "lifestyle"];
@@ -59,12 +60,15 @@ function ChecklistInner() {
       <div className="border-b border-border px-6 py-10">
         <div className="mx-auto max-w-6xl">
           <p className="label-caps mb-2 text-accent">Track your journey</p>
-          <h1
-            className="text-4xl font-bold text-foreground md:text-5xl"
-            style={{ fontFamily: "var(--font-playfair)" }}
-          >
-            Your Crunchy Checklist
-          </h1>
+          <div className="flex items-center gap-4">
+            <h1
+              className="text-4xl font-bold text-foreground md:text-5xl"
+              style={{ fontFamily: "var(--font-playfair)" }}
+            >
+              Your Crunchy Checklist
+            </h1>
+            <Hedgehog className="w-14 h-12 flex-shrink-0" />
+          </div>
         </div>
       </div>
 
@@ -77,6 +81,9 @@ function ChecklistInner() {
 
             {/* Score card */}
             <div className="overflow-hidden rounded-2xl bg-primary p-6 text-primary-foreground shadow-lg shadow-primary/20">
+              <div className="flex justify-end -mt-1 mb-2">
+                <Hedgehog className="w-14 h-12" />
+              </div>
               <p className="label-caps text-primary-foreground/60">Crunchy Score</p>
               <div className="mt-3 flex items-end gap-2">
                 <span
