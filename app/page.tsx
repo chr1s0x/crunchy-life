@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Hedgehog from "@/components/Hedgehog";
+import Image from "next/image";
 import {
   checklistItems,
   CATEGORY_LABELS,
@@ -67,7 +67,7 @@ export default function Home() {
 
           {/* Right — hedgehog + levels card */}
           <div className="hidden lg:flex lg:flex-col lg:items-center lg:gap-2">
-            <Hedgehog className="w-40 h-32 animate-hedgehog-float" />
+            <Image src="/hedgehog.png" alt="hedgehog mascot" width={160} height={160} className="object-contain animate-hedgehog-float" />
             <div className="relative rounded-3xl bg-primary p-8 text-primary-foreground shadow-2xl shadow-primary/30">
               {/* Decorative circle */}
               <div className="absolute -top-4 -right-4 h-24 w-24 rounded-full bg-accent/40 blur-2xl" />
@@ -277,7 +277,7 @@ export default function Home() {
 
       <footer className="border-t border-border py-8 text-center">
         <span className="label-caps text-muted-foreground inline-flex items-center gap-2">
-          <Hedgehog className="w-6 h-5" />
+          <Image src="/hedgehog.png" alt="hedgehog mascot" width={24} height={24} className="object-contain" />
           The Crunchy Life — live clean, live well
         </span>
       </footer>

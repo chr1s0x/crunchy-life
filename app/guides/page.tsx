@@ -4,7 +4,7 @@ import {
   CATEGORY_DESCRIPTIONS,
   type Category,
 } from "@/lib/checklist-data";
-import Hedgehog from "@/components/Hedgehog";
+import Image from "next/image";
 
 const categories: Category[] = ["pantry", "personal-care", "cleaning", "lifestyle"];
 
@@ -142,7 +142,7 @@ export default function GuidesPage() {
             >
               Crunchy Guides
             </h1>
-            <Hedgehog className="w-14 h-12 flex-shrink-0" />
+            <Image src="/hedgehog.png" alt="hedgehog mascot" width={56} height={56} className="object-contain flex-shrink-0" />
           </div>
         </div>
       </div>
@@ -231,7 +231,7 @@ export default function GuidesPage() {
 
       <footer className="border-t border-border py-8 text-center">
         <span className="label-caps text-muted-foreground inline-flex items-center gap-2">
-          <Hedgehog className="w-6 h-5" />
+          <Image src="/hedgehog.png" alt="hedgehog mascot" width={24} height={24} className="object-contain" />
           The Crunchy Life — live clean, live well
         </span>
       </footer>

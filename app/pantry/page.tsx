@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { pantryItems, type PantryItem } from "@/lib/checklist-data";
 import { getPantryProgress, togglePantryItem } from "@/lib/progress";
-import Hedgehog from "@/components/Hedgehog";
+import Image from "next/image";
 
 function PantryCard({
   item,
@@ -94,7 +94,7 @@ export default function PantryPage() {
             >
               Your Pantry & Fridge
             </h1>
-            <Hedgehog className="w-14 h-12 flex-shrink-0" />
+            <Image src="/hedgehog.png" alt="hedgehog mascot" width={56} height={56} className="object-contain flex-shrink-0" />
           </div>
           <p className="mb-8 max-w-lg text-muted-foreground">
             Click any item to mark it done. Green cards are crunchy-approved — stock them.

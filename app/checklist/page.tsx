@@ -15,7 +15,7 @@ import {
   getCategoryProgress,
   getCrunchyLevel,
 } from "@/lib/progress";
-import Hedgehog from "@/components/Hedgehog";
+import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 
 const categories: Category[] = ["pantry", "personal-care", "cleaning", "lifestyle"];
@@ -67,7 +67,7 @@ function ChecklistInner() {
             >
               Your Crunchy Checklist
             </h1>
-            <Hedgehog className="w-14 h-12 flex-shrink-0" />
+            <Image src="/hedgehog.png" alt="hedgehog mascot" width={56} height={56} className="object-contain flex-shrink-0" />
           </div>
         </div>
       </div>
@@ -82,7 +82,7 @@ function ChecklistInner() {
             {/* Score card */}
             <div className="overflow-hidden rounded-2xl bg-primary p-6 text-primary-foreground shadow-lg shadow-primary/20">
               <div className="flex justify-end -mt-1 mb-2">
-                <Hedgehog className="w-14 h-12" />
+                <Image src="/hedgehog.png" alt="hedgehog mascot" width={56} height={56} className="object-contain" />
               </div>
               <p className="label-caps text-primary-foreground/60">Crunchy Score</p>
               <div className="mt-3 flex items-end gap-2">

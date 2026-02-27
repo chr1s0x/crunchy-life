@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Hedgehog from "@/components/Hedgehog";
+import Image from "next/image";
 
 const links = [
   { href: "/checklist", label: "Checklist" },
@@ -18,7 +18,7 @@ export default function Nav() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link href="/" className="group flex items-center gap-2.5">
           <span className="flex items-center justify-center transition-transform group-hover:rotate-6">
-            <Hedgehog className="w-9 h-8" />
+            <Image src="/hedgehog.png" alt="hedgehog mascot" width={36} height={36} className="object-contain" />
           </span>
           <span
             className="text-base font-semibold tracking-tight text-foreground"
